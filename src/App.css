@@ -18,6 +18,10 @@ main .category {
   margin: 0 0 30px 40px;
 }
 
+main .category .name {
+  margin-bottom: 20px;
+}
+
 main .category .movies {
   width: 100%;
   display: flex;
