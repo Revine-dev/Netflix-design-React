@@ -27,6 +27,12 @@ main .category .movies {
   display: flex;
   overflow: hidden;
   overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+main .category .movies::-webkit-scrollbar {
+  display: none;
 }
 
 main .category .movie {
