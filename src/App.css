@@ -43,6 +43,7 @@ main .category .movies .photo {
   height: 180px;
   cursor: pointer;
   transition: all 0.5s;
+  position: relative;
 }
 
 main .movies img {
@@ -52,8 +53,51 @@ main .movies img {
 main .movies .moviename {
   text-align: center;
   text-transform: capitalize;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 main .category .movies .photo:hover {
   transform: scale(1.2);
+  z-index: 1;
+}
+
+main .category .movies .photo::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+main .category .movies .photo::after {
+  content: " ";
+  position: absolute;
+  background: url("https://user-images.githubusercontent.com/59733143/116389353-bdad5e00-a814-11eb-8281-07c5add58c04.png")
+    white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 2px 3px 3px gray;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+main .category .movies .photo:hover .moviename,
+main .category .movies .photo:hover::before,
+main .category .movies .photo:hover::after {
+  opacity: 1;
 }
