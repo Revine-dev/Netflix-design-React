@@ -54,8 +54,6 @@ main .movies .moviename {
   text-transform: capitalize;
 }
 
-/* REDUCE WIDTH AND HEIGHT AND GROW UP ON HOVER ! */
-
 main .category .movies .photo:hover {
   transform: scale(1.2);
 }
