@@ -1,5 +1,7 @@
 body {
   background: black;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .logo {
@@ -18,10 +20,6 @@ main .category {
   margin: 0 0 30px 40px;
 }
 
-main .category .name {
-  margin-bottom: 20px;
-}
-
 main .category .movies {
   width: 100%;
   display: flex;
@@ -35,6 +33,29 @@ main .category .movies::-webkit-scrollbar {
   display: none;
 }
 
-main .category .movie {
-  flex-shrink: 0;
+main .category .movies {
+  padding: 20px;
+  margin-left: -20px;
+}
+
+main .category .movies .photo {
+  width: 341px;
+  height: 180px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+main .movies img {
+  height: 80%;
+}
+
+main .movies .moviename {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* REDUCE WIDTH AND HEIGHT AND GROW UP ON HOVER ! */
+
+main .category .movies .photo:hover {
+  transform: scale(1.2);
 }
