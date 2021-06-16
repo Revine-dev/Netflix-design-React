@@ -13,12 +13,12 @@ const Category = (props) => {
   };
 
   return (
-    <div className="category">
+    <div className="category" role="list">
       <div className="name">{props.category}</div>
       <div className="movies">
         {props.images.map((img, i) => {
           return (
-            <div key={i} className="photo">
+            <div key={i} className="photo" role="listitem">
               <img src={img} alt={`movie ${i}`} />
               <div className="moviename">{getMovieName(img)}</div>
             </div>
